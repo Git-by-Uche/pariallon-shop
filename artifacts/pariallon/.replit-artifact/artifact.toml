@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Pariallon | PA"
+description = "A warm, curated online shop for discovering everyday favorites, with Google sign-in, a saved cart, and a streamlined checkout."
+version = "1.0.0"
+id = "artifacts/pariallon"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19161
+
+[services.development]
+run = "pnpm --filter @workspace/pariallon run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pariallon", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/pariallon/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19161"
+BASE_PATH = "/"
