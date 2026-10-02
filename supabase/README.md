@@ -8,6 +8,8 @@ Open the Supabase SQL Editor, paste in `supabase/schema.sql`, and run it. It cre
 
 The sample catalog references product images served by the Pariallon website from `/products/`.
 
+If you only need the public catalog, `supabase/products.sql` is a standalone script that creates the app-compatible `products` table, grants public read access, and adds 20 more sample products.
+
 ## 2. Confirm Google sign-in
 
 In Supabase Dashboard, open **Authentication → Sign In / Providers → Google**. Confirm the Google provider is enabled and that your Google OAuth client is configured. Add the published Pariallon site URL to the Supabase authentication URL configuration after publishing.
