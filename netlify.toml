@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm --filter @workspace/pariallon run typecheck && pnpm --filter @workspace/pariallon run build"
+  publish = "artifacts/pariallon/dist/public"
+
+[build.environment]
+  BASE_PATH = "/"
+  NODE_VERSION = "24"
+  PORT = "19161"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
