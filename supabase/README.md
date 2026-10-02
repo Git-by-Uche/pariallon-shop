@@ -8,7 +8,7 @@ Open the Supabase SQL Editor, paste in `supabase/schema.sql`, and run it. It cre
 
 The sample catalog references product images served by the Pariallon website from `/products/`.
 
-If you only need the public catalog, `supabase/products.sql` is a standalone script that creates the app-compatible `products` table, grants public read access, and adds 20 more sample products.
+If you only need the public catalog, `supabase/products.sql` is a standalone script that creates the app-compatible `products` table, grants public read access, and adds 16 more sample products using the supplied Pexels image links.
 
 ## 2. Confirm Google sign-in
 
